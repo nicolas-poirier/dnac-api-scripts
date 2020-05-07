@@ -3,7 +3,7 @@ Collection of standalone scripts I used with DNA Center APIs
 
 ## List of scripts
 
-* dnac_get-all-configs.py
+* [dnac_get-all-configs.py](https://github.com/nicolas-poirier/dnac-api-scripts/blob/master/README.md#dnac_get-all-configs)
   * backup all configuration from the equipments on DNA Center Inventory
 
 ## dnac_get-all-configs
