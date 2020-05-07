@@ -18,12 +18,16 @@ if __name__ == '__main__':
     parser.add_argument('--dnac', help='IP Address or FQDN of DNA Center Server', type=str, required=True)
     parser.add_argument('-u', '--user', help='username to authenticate on DNA Center', type=str, required=True)
     parser.add_argument('-p', '--password', help='password to authenticate on DNA Center', type=str, required=True)
+    parser.add_argument('-v', '--verify', help='enable HTTPS certificate verification (Optional, Default=True)', default="True", choices=["True","False"], type=str, required=False)
     args = parser.parse_args()
 
     # Basic Authentication is required in order to obtain an authentication token
     credentials = b64encode((args.user + ":" + args.password).encode()).decode()
     headers = {"Content-Type": "application/json", 'Authorization': "Basic "+ credentials}
-    response = post(f"https://{args.dnac}/dna/system/api/v1/auth/token", data="", headers=headers, verify=False)
+    if args.verify:
+        response = post(f"https://{args.dnac}/dna/system/api/v1/auth/token", data="", headers=headers)
+    else:
+        response = post(f"https://{args.dnac}/dna/system/api/v1/auth/token", data="", headers=headers, verify=False)
 
     # if the authentication is successful, the Token is saved
     if response.status_code != 200:
@@ -34,7 +38,10 @@ if __name__ == '__main__':
     # New header with authentication Token
     headers = {"Content-Type": "application/json", "x-auth-token": dnac_token}
     # GET Request to get device configuration from DNA Center
-    response = get(f"https://{args.dnac}/dna/intent/api/v1/network-device/config", data="", headers=headers, verify=False)
+    if args.verify:
+        response = get(f"https://{args.dnac}/dna/intent/api/v1/network-device/config", data="", headers=headers)
+    else:
+        response = get(f"https://{args.dnac}/dna/intent/api/v1/network-device/config", data="", headers=headers, verify=False)
     
     if response.status_code == 200:
         counter = 1
