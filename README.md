@@ -14,9 +14,20 @@ Collection of standalone scripts I used with DNA Center APIs
 * Python
   * Version 3.x
 
+#### Demo using Cisco DNA Center Sandbox
+* https://sandboxdnac.cisco.com/
+  * user: devnetuser
+  * password: Cisco123!
+
+While running the demo, there was 4 devices in DNA Center Inventory.
+After the execution of the script, the 4 configuration files for these equipements are saved along the script.
+
+![](./demo-scripts/demo-dnac_get-all-configs.gif)
+_(running with https://sandboxdnac.cisco.com/)_
+
 #### Usage
 - System Args
-  * Help section
+  * Help section:
 ```
 $ python dnac_get-all-configs.py --help
 usage: dnac_get-all-configs.py [-h] --dnac DNAC -u USER -p PASSWORD
