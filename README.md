@@ -1,6 +1,6 @@
 # dnac-api-scripts
-Collection of standalone scripts I used with DNA Center APIs.
-You can follow the repository as new scripts will be added over time.
+Collection of standalone scripts I used with DNA Center APIs.  
+You can follow the repository as new scripts will be added over time.  
 
 ## List of scripts
 
@@ -20,7 +20,7 @@ You can follow the repository as new scripts will be added over time.
   * user: devnetuser
   * password: Cisco123!
 
-While running the demo, there was 4 devices in DNA Center Inventory.
+While running the demo, there was 4 devices in DNA Center Inventory.  
 After the execution of the script, the 4 configuration files for these equipements are saved along the script.
 
 ![](./demo-scripts/demo-dnac_get-all-configs.gif)
