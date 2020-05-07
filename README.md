@@ -26,6 +26,16 @@ After the execution of the script, the 4 configuration files for these equipemen
 _(running with https://sandboxdnac.cisco.com/)_
 
 #### Usage
+- When using the script for the first time
+  - First, download or clone this repository
+    - ``` git clone https://github.com/nicolas-poirier/dnac-api-scripts.git ```
+  - Go to the cloned repository directory
+    - ``` cd dnac-api-scripts ```
+  - Install Python required packages using the requirements file
+    - ``` pip install -r requirements.txt ```
+
+***You are now ready to use the script!***
+
 - System Args
   * Help section:
 ```
