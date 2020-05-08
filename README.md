@@ -1,3 +1,5 @@
+[![published](https://static.production.devnetcloud.com/codeexchange/assets/images/devnet-published.svg)](https://developer.cisco.com/codeexchange/github/repo/nicolas-poirier/dnac-api-scripts)
+
 # dnac-api-scripts
 Collection of standalone scripts I used with DNA Center APIs.  
 You can follow the repository as new scripts will be added over time.  
