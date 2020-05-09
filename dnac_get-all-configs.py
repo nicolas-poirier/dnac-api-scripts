@@ -47,7 +47,7 @@ if __name__ == '__main__':
         counter = 1
         for device in response.json()["response"]:
             # Find device hostname with classic IOS syntax
-            hostname = search(r"^hostname ([a-zA-Z0-9\-_]*$)",device["runningConfig"], MULTILINE)
+            hostname = search(r"^hostname (.*$)",device["runningConfig"], MULTILINE)
             if hostname:
                 hostname = hostname.group(1)
             # if hostname not found, the device is called "UNKNOWN-xx"
