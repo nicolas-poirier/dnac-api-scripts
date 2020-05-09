@@ -39,6 +39,7 @@ _(running with https://sandboxdnac.cisco.com/)_
 
 ***You are now ready to use the script!***
 
+- On Linux and MACOS, it may be needed to use the python3 command to specify the version of Python
 - System Args
   * Help section:
 ```
