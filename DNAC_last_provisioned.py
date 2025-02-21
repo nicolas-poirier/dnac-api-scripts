@@ -48,14 +48,14 @@ def get_device_uuid(dnac_url, token, filter="."):
         },
         verify=False
     )
-    # On créé une liste de liste contenant les uuid et hostname de chaque équioement
+    # On créé une liste de liste contenant les uuid et hostnames de chaque équipement
     uuid_list = []
     for device in response.json()['response']:
         uuid_list.append([device['id'], device['hostname']])
         print(f"     Device Found: {device['hostname']} with the UUID {device['id']}")
     return uuid_list
 
-#Pour une liste de device UUID fournit, colecte du hostname et du dernier device provisioning (lastUpdateTime)
+#Pour une liste de device UUID fournit, collecte du hostname et du dernier device provisioning (lastUpdateTime)
 # Si pas de provisioning, on renvoit 0 (epoch time) comme date du dernier provisioning
 def get_all_cfs_device_info(dnac_url, dnac_token, list_of_device_uuids):
     print("[+] Searching the last provisioned date for each device")
@@ -78,7 +78,8 @@ def get_all_cfs_device_info(dnac_url, dnac_token, list_of_device_uuids):
                 all_cfs_info.append(cfs_device_info)
             bar()           
         return all_cfs_info
-    
+
+# Conversion du temps Linux (epoch time) en date lisible
 def make_epoch_time_human_readable(epoch_timestamp_in_ms: int) -> str:
     epoch_timestamp_divided = epoch_timestamp_in_ms / 1000.0
     human_readable_time = time.strftime('%d %b %Y %I:%M:%S %p', time.localtime(epoch_timestamp_divided))
