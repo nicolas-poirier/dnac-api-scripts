@@ -11,6 +11,8 @@ https://developer.cisco.com/docs/dna-center/
 
 * [dnac_get-all-configs.py](https://github.com/nicolas-poirier/dnac-api-scripts/blob/master/README.md#dnac_get-all-configs)
   * backup all configuration from the equipments on DNA Center Inventory
+* [DNAC_last_provisioned.py](https://github.com/nicolas-poirier/dnac-api-scripts/blob/master/README.md#DNAC_last_provisioned)
+  * Retrieve the last date of provisioning from the network devices on Catalyst Center
 
 ## dnac_get-all-configs
 
