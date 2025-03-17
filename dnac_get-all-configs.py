@@ -18,7 +18,7 @@ if __name__ == '__main__':
     parser.add_argument('--dnac', help='IP Address or FQDN of DNA Center Server', type=str, required=True)
     parser.add_argument('-u', '--user', help='username to authenticate on DNA Center', type=str, required=True)
     parser.add_argument('-p', '--password', help='password to authenticate on DNA Center', type=str, required=True)
-    parser.add_argument('-v', '--verify', help='enable HTTPS certificate verification (Optional, Default=True)', default="True", choices=["True","False"], type=str, required=False)
+    parser.add_argument('-v', '--verify', help='enable HTTPS certificate verification (Optional, Default=False)', default=False, choices=[True,False], type=str, required=False)
     args = parser.parse_args()
 
     # Basic Authentication is required in order to obtain an authentication token
