@@ -20,7 +20,7 @@ https://developer.cisco.com/docs/dna-center/
 
 #### Prerequisites
 * Cisco DNA Center
-  * Release: 1.3.0.x - 1.3.3.x
+  * Release: 1.3.0.x - 2.3.7.x
 * Python
   * Version 3.x
 
